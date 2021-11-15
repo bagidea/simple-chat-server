@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+message Reward {
+    string name = 1;
+    string pic = 2;
+    float value = 3;
+}

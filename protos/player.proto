@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+message Player {
+    int32 id = 1;
+    string name = 2;
+    string lv = 3;
+    string language = 4;
+    int32 diceId = 5;
+    int32 characterId = 6;
+    int32 heartValue = 7;
+    string avatar = 8;
+    int32 shield = 9;
+    int32 jailBreak = 10;
+    int32 stamina = 11;
+}

@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+message Standard {
+    bool success = 1;
+    string text = 2;
+    bytes data = 3;
+}
+
+message Login {
+    string username = 1;
+    string password = 2;
+}
+
+message CreateRoom {
+    int32 num = 1;
+    string status = 2;
+}
+
+message JoinRoom {
+    string roomId = 1;
+}
+
+message SendMessage {
+    string msg = 1;
+}

@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+import "protos/player.proto";
+import "protos/map.proto";
+import "protos/reward.proto";
+
+message RoomObject {
+    string roomId = 1;
+    int32 num = 2;
+    string dateTime = 3;
+    int32 host = 4;
+    repeated Player players = 5;
+    Map map = 6;
+    repeated Reward rewards = 7;
+}
+
+message ReceiveMessage {
+    Player player = 1;
+    string msg = 2;
+}
+
+message JoinAndLeaveRoom {
+    Player player = 1;
+}

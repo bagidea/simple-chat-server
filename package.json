@@ -1,0 +1,27 @@
+{
+  "name": "GameServer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon dist/server.js",
+    "start": "node dist/server.js",
+    "compile": "protoc --plugin='protoc-gen-ts=./node_modules/.bin/protoc-gen-ts' --js_out=import_style=commonjs,binary:./dist --ts_out=./dist ./protos/player.proto ./protos/map.proto ./protos/reward.proto ./protos/server.proto ./protos/client.proto ./protos/room.proto ./protos/global.proto ./protos/contract.proto",
+    "build": "tsc -w",
+    "build:all": "npm run compile && tsc -w",
+    "compile:csharp": "protoc --csharp_out='./dist_csharp' ./protos/player.proto ./protos/map.proto ./protos/reward.proto ./protos/server.proto ./protos/client.proto ./protos/room.proto ./protos/global.proto ./protos/contract.proto",
+    "clean": "rm -rf ./dist/*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "google-protobuf": "^3.19.1",
+    "socket.io": "^4.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "ts-protoc-gen": "^0.15.0",
+    "typescript": "^4.4.4"
+  }
+}

@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+import "protos/player.proto";
+
+message Client {
+    Player player = 1;
+    string roomId = 2;
+}
+
+message ClientMap {
+    map<string, Client> users = 1;
+}

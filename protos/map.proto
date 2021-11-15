@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+message Move {
+    int32 from = 1;
+    int32 to = 2;
+    repeated int32 route = 3;
+}
+
+message Map {
+    int32 id = 1;
+    repeated int32 jails = 2;
+    repeated int32 boss = 3;
+    repeated int32 treasure = 4;
+    repeated int32 traps = 5;
+    repeated Move moveUp = 6;
+    repeated Move moveDown = 7;
+}
